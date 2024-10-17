@@ -82,6 +82,9 @@ CREATE TABLE orden_compra_ingrediente_a_proveedor (
     fecha DATE NOT NULL
 );
 
+ALTER TABLE `panaderia`.`orden_compra_ingrediente_a_proveedor` 
+ADD COLUMN `estado` VARCHAR(45) NOT NULL AFTER `fecha`;
+
 -- Tabla ingredientes_orden (relación muchos a muchos entre ingredientes y órdenes de compra)
 CREATE TABLE ingredientes_orden (
     id_ingrediente INT,

@@ -69,6 +69,10 @@ INSERT INTO orden_compra_ingrediente_a_proveedor (fecha) VALUES
 ('2024-09-30'),
 ('2024-10-02');
 
+UPDATE `panaderia`.`orden_compra_ingrediente_a_proveedor` SET `estado` = 'entregado' WHERE (`id_orden` = '1');
+UPDATE `panaderia`.`orden_compra_ingrediente_a_proveedor` SET `estado` = 'pendiente' WHERE (`id_orden` = '2');
+UPDATE `panaderia`.`orden_compra_ingrediente_a_proveedor` SET `estado` = 'entregado' WHERE (`id_orden` = '3');
+
 
 INSERT INTO ingredientes_orden (id_ingrediente, id_orden) VALUES
 (1, 1),  -- Harina ordenada en la primera orden
